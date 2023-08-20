@@ -14,8 +14,6 @@ import java.util.List;
 @Repository
 public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
 
-    @Query("select c from Empresa c where c.nome ilike :searchTerm ")
-    List<Empresa> findByName(String searchTerm);
 
     @Query(value = "select c from Empresa c where c.nome ilike :searchTerm")
     Page<Empresa> findByNamev2(@Param("searchTerm") String searchTerm, Pageable pageable);

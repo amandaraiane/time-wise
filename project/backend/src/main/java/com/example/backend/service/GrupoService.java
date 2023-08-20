@@ -34,9 +34,6 @@ public class GrupoService {
         repository.deleteById(grupoId);
     }
 
-    public List<Grupo> findByName(String searchTerm){
-        return repository.findByName(searchTerm);
-    }
 
     public Page<Grupo> findByNamev2(Integer pageNumber, Integer pageSize, String searchTerm){
         searchTerm = Objects.nonNull(searchTerm) ? searchTerm : "";

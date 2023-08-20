@@ -8,6 +8,7 @@ import com.example.backend.service.GrupoService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,8 +35,15 @@ public class GrupoApi {
         return "Grupo saved with success";
     }
 
+    @GetMapping
+    public Page<Grupo> findByNamev2(@RequestParam String searchTerm,
+                                      @RequestParam(name = "pageNumber", defaultValue = "0") Integer pageNumber,
+                                      @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize) {
+        return service.findByNamev2(pageNumber, pageSize, searchTerm);
+    }
+
     @GetMapping("/{grupoId}")
-    public Optional<Grupo> findtimeSheet(@PathVariable Long grupoId) {
+    public Optional<Grupo> findGrupo(@PathVariable Long grupoId) {
         return service.findGrupo(grupoId);
     }
 

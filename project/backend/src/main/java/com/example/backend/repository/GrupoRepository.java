@@ -14,9 +14,6 @@ import java.util.List;
 @Repository
 public interface GrupoRepository extends JpaRepository<Grupo, Long> {
 
-    @Query("select c from Grupo c where c.nome ilike :searchTerm ")
-    List<Grupo> findByName(String searchTerm);
-
     @Query(value = "select c from Grupo c where c.nome ilike :searchTerm")
     Page<Grupo> findByNamev2(@Param("searchTerm") String searchTerm, Pageable pageable);
 

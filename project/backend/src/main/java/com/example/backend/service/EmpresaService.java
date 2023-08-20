@@ -34,9 +34,6 @@ public class EmpresaService {
         repository.deleteById(empresaId);
     }
 
-    public List<Empresa> findByName(String searchTerm){
-        return repository.findByName(searchTerm);
-    }
 
     public Page<Empresa> findByNamev2(Integer pageNumber, Integer pageSize, String searchTerm){
         searchTerm = Objects.nonNull(searchTerm) ? searchTerm : "";
