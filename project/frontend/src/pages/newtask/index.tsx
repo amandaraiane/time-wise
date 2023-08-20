@@ -38,7 +38,7 @@ const newtask: React.FC = () => {
               </div>
               <div className="flex flex-row space-x-[5px] pt-[40px] items-center ">
                 <Clock size={32} color="#2AC856" weight="fill"></Clock>
-                <div className="text-[1.2vw]">12 horas</div>
+                <div className="text-[1.2vw]">0 hora</div>
               </div>
             </div>
           </div>
