@@ -32,9 +32,6 @@ public class ColaboradorService {
         repository.deleteById(colaboradorId);
     }
 
-    public List<Colaborador> findByName(String searchTerm){
-        return repository.findByName(searchTerm);
-    }
 
     public Page<Colaborador> findByNamev2(Integer pageNumber, Integer pageSize, String searchTerm){
         searchTerm = Objects.nonNull(searchTerm) ? searchTerm : "";

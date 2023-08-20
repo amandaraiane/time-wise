@@ -14,8 +14,6 @@ import java.util.List;
 @Repository
 public interface ColaboradorRepository extends JpaRepository<Colaborador, Long> {
 
-    @Query("select c from Colaborador c where c.nome ilike :searchTerm ")
-    List<Colaborador> findByName(String searchTerm);
 
     @Query(value = "select c from Colaborador c where c.nome ilike :searchTerm")
     Page<Colaborador> findByNamev2(@Param("searchTerm") String searchTerm, Pageable pageable);

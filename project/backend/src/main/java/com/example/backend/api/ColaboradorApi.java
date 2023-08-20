@@ -7,6 +7,7 @@ import com.example.backend.service.ColaboradorService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,8 +34,15 @@ public class ColaboradorApi {
         return "colaborador saved with success";
     }
 
+    @GetMapping
+    public Page<Colaborador> findByNamev2(@RequestParam String searchTerm,
+                                       @RequestParam(name = "pageNumber", defaultValue = "0") Integer pageNumber,
+                                       @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize) {
+        return service.findByNamev2(pageNumber, pageSize, searchTerm);
+    }
+
     @GetMapping("/{colaboradorId}")
-    public Optional<Colaborador> findtimeSheet(@PathVariable Long colaboradorId) {
+    public Optional<Colaborador> findColaborador(@PathVariable Long colaboradorId) {
         return service.findColaborador(colaboradorId);
     }
 

@@ -39,11 +39,11 @@ public class Atividade {
     @ManyToOne
     private Empresa empresa;
 
-//    @OneToMany
-//    private Colaborador demandante;
-//
-//
-//    private Colaborador colaborador;
+    @ManyToOne
+    private Colaborador demandante;
+
+    @ManyToOne
+    private Colaborador colaborador;
 
     @Column(name = "data")
     private Date data;
@@ -52,8 +52,8 @@ public class Atividade {
     @Column(name = "prioridade")
     private PrioridadeEnum prioridadeEnum;
 
-//    @Column(name = "relator")
-//    private Colaborador relator;
+    @ManyToOne
+    private Colaborador relator;
 
     @Column(name = "sprint")
     private String sprint;
