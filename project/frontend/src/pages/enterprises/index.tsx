@@ -3,18 +3,18 @@ import React, { useEffect } from "react";
 
 // import { Container } from './styles';
 
-const Dashboard: React.FC = () => {
+const Enterprises: React.FC = () => {
   return (
-    <div className="">
+    <div>
       <Navbar
-        colorOne={"#1818"}
+        colorOne={"#545454"}
         colorTwo={"#545454"}
         colorThree={"#545454"}
-        colorFour={"#545454"}
+        colorFour={"#1818"}
         colorFive={"#545454"}
       ></Navbar>
     </div>
   );
 };
 
-export default Dashboard;
+export default Enterprises;
