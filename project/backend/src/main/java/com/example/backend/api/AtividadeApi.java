@@ -32,14 +32,8 @@ public class AtividadeApi {
     }
 
     @GetMapping("/{atividadeId}")
-    public Optional<Atividade> findtimeSheet(@PathVariable Long comandaId) {
+    public Optional<Atividade> findtimeSheet(@PathVariable Long atividadeId) {
         return service.findAtividade(atividadeId);
-    }
-
-    @GetMapping
-    public Page<Atividade> findAllByOrderByIdDesc(@RequestParam(value = "pageNumber", defaultValue = "0", required = false) int pageNumber,
-                                                @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize){
-        return service.findAllByOrderByIdDesc(pageNumber, pageSize);
     }
 
     @PutMapping
@@ -49,7 +43,7 @@ public class AtividadeApi {
     }
 
     @DeleteMapping("/{atividadeId}")
-    public String deletecomanda(@PathVariable Long atividadeId) {
+    public String deleteatividade(@PathVariable Long atividadeId) {
         service.deleteById(atividadeId);
         return "Atividade " + atividadeId + " Was deleted";
     }

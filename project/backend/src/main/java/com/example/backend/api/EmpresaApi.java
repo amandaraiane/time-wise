@@ -1,6 +1,5 @@
 package com.example.backend.api;
 
-import com.example.backend.entity.Colaborador;
 import com.example.backend.entity.Empresa;
 import com.example.backend.service.ColaboradorService;
 import com.example.backend.service.EmpresaService;
@@ -38,11 +37,6 @@ public class EmpresaApi {
         return service.findEmpresa(empresaId);
     }
 
-    @GetMapping
-    public Page<Colaborador> findAllByOrderByIdDesc(@RequestParam(value = "pageNumber", defaultValue = "0", required = false) int pageNumber,
-                                                    @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize){
-        return service.findAllByOrderByIdDesc(pageNumber, pageSize);
-    }
 
     @PutMapping
     public String update(@RequestBody Empresa empresa) {

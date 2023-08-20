@@ -13,10 +13,10 @@ import java.util.List;
 @Repository
 public interface AtividadeRepository extends JpaRepository<Atividade, Long> {
 
-    @Query("select c from Atividade c where c.name ilike :searchTerm ")
-    List<Atividade> findByName(String searchTerm);
+//    @Query("select c from Atividade c where c.name ilike :searchTerm ")
+//    List<Atividade> findByName(String searchTerm);
 
-    @Query(value = "select c from Atividade c where c.name ilike :searchTerm")
-    Page<Atividade> findByNamev2(@Param("searchTerm") String searchTerm, Pageable pageable);
+//    @Query(value = "select c from Atividade c where c.name ilike :searchTerm")
+//    Page<Atividade> findByNamev2(@Param("searchTerm") String searchTerm, Pageable pageable);
 
 }

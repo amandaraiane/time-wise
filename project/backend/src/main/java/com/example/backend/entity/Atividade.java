@@ -3,7 +3,6 @@ package com.example.backend.entity;
 
 import com.example.backend.entity.enums.*;
 import jakarta.persistence.*;
-import jdk.jshell.Snippet;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -37,14 +36,14 @@ public class Atividade {
     @Column(name = "descricao")
     private String descricao;
 
-    @Column(name = "empresa")
+    @ManyToOne
     private Empresa empresa;
 
-    @Column(name = "demandante")
-    private Colaborador demandante;
-
-    @Column(name = "colaborador")
-    private Colaborador colaborador;
+//    @OneToMany
+//    private Colaborador demandante;
+//
+//
+//    private Colaborador colaborador;
 
     @Column(name = "data")
     private Date data;
@@ -53,8 +52,8 @@ public class Atividade {
     @Column(name = "prioridade")
     private PrioridadeEnum prioridadeEnum;
 
-    @Column(name = "relator")
-    private Colaborador relator;
+//    @Column(name = "relator")
+//    private Colaborador relator;
 
     @Column(name = "sprint")
     private String sprint;

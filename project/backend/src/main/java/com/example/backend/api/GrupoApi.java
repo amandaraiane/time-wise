@@ -4,6 +4,7 @@ import com.example.backend.entity.Colaborador;
 import com.example.backend.entity.Empresa;
 import com.example.backend.entity.Grupo;
 import com.example.backend.service.EmpresaService;
+import com.example.backend.service.GrupoService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,7 +26,7 @@ import java.util.Optional;
 public class GrupoApi {
 
     @Autowired
-    private EmpresaService service;
+    private GrupoService service;
 
     @PostMapping
     public String save(@RequestBody Grupo grupo) {
@@ -36,12 +37,6 @@ public class GrupoApi {
     @GetMapping("/{grupoId}")
     public Optional<Grupo> findtimeSheet(@PathVariable Long grupoId) {
         return service.findGrupo(grupoId);
-    }
-
-    @GetMapping
-    public Page<Grupo> findAllByOrderByIdDesc(@RequestParam(value = "pageNumber", defaultValue = "0", required = false) int pageNumber,
-                                                    @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize){
-        return service.findAllByOrderByIdDesc(pageNumber, pageSize);
     }
 
     @PutMapping

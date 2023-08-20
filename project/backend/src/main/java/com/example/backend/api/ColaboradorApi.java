@@ -38,11 +38,6 @@ public class ColaboradorApi {
         return service.findColaborador(colaboradorId);
     }
 
-    @GetMapping
-    public Page<Colaborador> findAllByOrderByIdDesc(@RequestParam(value = "pageNumber", defaultValue = "0", required = false) int pageNumber,
-                                                  @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize){
-        return service.findAllByOrderByIdDesc(pageNumber, pageSize);
-    }
 
     @PutMapping
     public String update(@RequestBody Colaborador colaborador) {

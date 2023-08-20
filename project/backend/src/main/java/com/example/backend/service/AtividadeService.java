@@ -32,13 +32,13 @@ public class AtividadeService {
         repository.deleteById(atividadeId);
     }
 
-    public List<Atividade> findByName(String searchTerm){
-        return repository.findByName(searchTerm);
-    }
+//    public List<Atividade> findByName(String searchTerm){
+//        return repository.findByName(searchTerm);
+//    }
 
-    public Page<Atividade> findByNamev2(Integer pageNumber, Integer pageSize, String searchTerm){
-        searchTerm = Objects.nonNull(searchTerm) ? searchTerm : "";
-        return repository.findByNamev2("%"+searchTerm+"%", PageRequest.of(pageNumber, pageSize));
-    }
+//    public Page<Atividade> findByNamev2(Integer pageNumber, Integer pageSize, String searchTerm){
+//        searchTerm = Objects.nonNull(searchTerm) ? searchTerm : "";
+//        return repository.findByNamev2("%"+searchTerm+"%", PageRequest.of(pageNumber, pageSize));
+//    }
 
 }
