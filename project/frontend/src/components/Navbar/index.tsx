@@ -33,7 +33,7 @@ const Navbar: React.FC<Props> = ({
   colorFive,
 }) => {
   return (
-    <div className="w-[324px] h-screen bg-[#FAFAFA]  ">
+    <div className="w-[324px] h-screen bg-[#FAFAFA]  font-inter fixed">
       <div className="flex flex-1 justify-center items-center h-[100px] ">
         <Image alt="" src={Logo} className="w-[180px] "></Image>
       </div>
