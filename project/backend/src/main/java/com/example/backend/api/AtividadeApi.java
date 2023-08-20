@@ -44,16 +44,14 @@ public class AtividadeApi {
 
     @PutMapping
     public String update(@RequestBody Atividade atividade) {
-        service.save(comanda);
+        service.save(atividade);
         return "Atividade updated with success";
     }
 
-    @DeleteMapping("/{comandaId}")
+    @DeleteMapping("/{atividadeId}")
     public String deletecomanda(@PathVariable Long atividadeId) {
         service.deleteById(atividadeId);
         return "Atividade " + atividadeId + " Was deleted";
     }
-
-
 
 }
