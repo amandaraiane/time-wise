@@ -8,7 +8,7 @@ import usericon from "../../../public/user.png";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="flex flex-1 flex-row">
+    <div className="flex flex-1 flex-row font-inter">
       <Navbar
         colorOne={"#1818"}
         colorTwo={"#545454"}
