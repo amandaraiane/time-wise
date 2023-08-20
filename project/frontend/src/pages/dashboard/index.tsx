@@ -8,6 +8,8 @@ import usericon from "../../../public/user.png";
 import { Trophy } from "@phosphor-icons/react";
 import EnterpriseModal from "@/components/Dashboard/EnterpriseModal";
 import enterprise from "../../../public/enterprise.png";
+import collaborator from "../../../public/colaborador.png";
+import plaintiff from "../../../public/demandante.png";
 import InfoModal from "@/components/Dashboard/InfoModal";
 const Dashboard: React.FC = () => {
   return (
@@ -59,8 +61,8 @@ const Dashboard: React.FC = () => {
               </div>
               <div>
                 <EnterpriseModal
-                  src={enterprise}
-                  empresa="Cubo"
+                  src={plaintiff}
+                  empresa="João Silva"
                   horasDemandadas={"217 horas"}
                   colaboradoresDemandados={"21 colaboradores"}
                   percentualGeral={"87%"}
@@ -106,25 +108,25 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="space-y-[1.5vw]">
                 <InfoModal
-                  img={enterprise}
+                  img={collaborator}
                   info="217 horas"
                   moreInfo="5 empresas"
                   enterprise="Cubo"
                 ></InfoModal>
                 <InfoModal
-                  img={enterprise}
+                  img={collaborator}
                   info="217 horas"
                   moreInfo="5 empresas"
                   enterprise="Cubo"
                 ></InfoModal>
                 <InfoModal
-                  img={enterprise}
+                  img={collaborator}
                   info="217 horas"
                   moreInfo="5 empresas"
                   enterprise="Cubo"
                 ></InfoModal>
                 <InfoModal
-                  img={enterprise}
+                  img={collaborator}
                   info="217 horas"
                   moreInfo="5 empresas"
                   enterprise="Cubo"
